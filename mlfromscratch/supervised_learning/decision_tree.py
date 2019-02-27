@@ -77,9 +77,10 @@ class DecisionTree(object):
         best_criteria = None    # Feature index and threshold
         best_sets = None        # Subsets of the data
 
-        # Check if expansion of y is needed
+        # Check if expansion of y is needed   ??
         if len(np.shape(y)) == 1:
             y = np.expand_dims(y, axis=1)
+        
 
         # Add y as last column of X
         Xy = np.concatenate((X, y), axis=1)
